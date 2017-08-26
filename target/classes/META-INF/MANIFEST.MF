@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: spring-boot-api-project-seed
+Implementation-Version: 1.0
+Implementation-Vendor-Id: com.github.lihengming
+Build-Jdk: 1.7.0_79
+Built-By: jude
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ api-project-seed/
+

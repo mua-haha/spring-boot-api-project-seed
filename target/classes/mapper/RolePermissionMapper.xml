@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.RolePermissionMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RolePermission">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="role_permission_id" jdbcType="INTEGER" property="rolePermissionId" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="permission_id" jdbcType="INTEGER" property="permissionId" />
+  </resultMap>
+	
+	<sql id="Base_Column_List">
+        				role_permission_id ,
+				role_id ,
+				permission_id 
+    </sql>
+    
+    <select id="getBeanList" resultMap="BaseResultMap" parameterType="com.company.project.model.RolePermission">
+		select
+		<include refid="Base_Column_List" />
+		from role_permission
+		<where>
+				<if test="rolePermissionId != null">
+					and role_permission_id =  #{ rolePermissionId }
+				</if>
+				<if test="roleId != null">
+					and role_id =  #{ roleId }
+				</if>
+				<if test="permissionId != null">
+					and permission_id =  #{ permissionId }
+				</if>
+		</where>
+	</select>
+</mapper>
