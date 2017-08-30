@@ -19,6 +19,7 @@
 		<version>1.5.4.RELEASE</version>
 	</parent>
 
+	
 	<dependencies>
 		<!--Spring Boot依赖 -->
 		<dependency>
